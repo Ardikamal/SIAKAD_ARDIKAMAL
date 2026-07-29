@@ -1,0 +1,140 @@
+/* ==========================================================================
+   SIAKAD Sederhana — tema kustom di atas Bootstrap 5 + AdminLTE 4.
+   Palet warna: navy gelap (identitas utama) + biru (aksen) + status semantik.
+   ========================================================================== */
+
+:root{
+  --clr-primary:#0F172A;
+  --clr-secondary:#1E40AF;
+  --clr-accent:#3B82F6;
+  --clr-success:#10B981;
+  --clr-warning:#F59E0B;
+  --clr-danger:#EF4444;
+  --bs-primary:#1E40AF;
+  --bs-primary-rgb:30,64,175;
+  --bs-link-color:#1E40AF;
+  --bs-link-hover-color:#152e7a;
+  --bs-border-radius:.65rem;
+}
+
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:#f4f6fa;
+}
+h1,h2,h3,h4,h5,h6,.brand-text,.stat-value,.login-title,.krs-sks-counter{
+  font-family:'Plus Jakarta Sans','Inter',sans-serif;
+}
+
+a{ color:var(--clr-secondary); }
+a:hover{ color:#152e7a; }
+
+.btn-primary{ background-color:var(--clr-secondary); border-color:var(--clr-secondary); }
+.btn-primary:hover,.btn-primary:focus{ background-color:#152e7a; border-color:#152e7a; }
+.btn-outline-primary{ color:var(--clr-secondary); border-color:var(--clr-secondary); }
+.btn-outline-primary:hover{ background-color:var(--clr-secondary); border-color:var(--clr-secondary); }
+
+/* ---------- App shell (topbar + sidebar + footer) ---------- */
+.app-header{ border-bottom:1px solid #e7eaf0; }
+
+.app-sidebar{ background:linear-gradient(180deg,#0F172A 0%,#16213e 100%) !important; }
+.sidebar-brand{ border-bottom:1px solid rgba(255,255,255,.08); padding:1rem; }
+.brand-link{ display:flex; align-items:center; color:#fff !important; text-decoration:none; }
+.brand-icon{ color:#3B82F6; font-size:1.35rem; margin-right:.6rem; }
+.sidebar-menu .nav-link{ color:rgba(255,255,255,.78); border-radius:8px; margin:2px 10px; transition:.15s; }
+.sidebar-menu .nav-link:hover{ background:rgba(59,130,246,.18); color:#fff; }
+.sidebar-menu .nav-link.active{ background:var(--clr-accent); color:#fff; }
+.sidebar-menu .nav-icon{ color:inherit; margin-right:.5rem; }
+
+.app-footer{ background:#fff; border-top:1px solid #e7eaf0; padding:.9rem 1.5rem; }
+.footer-identitas{ font-size:.78rem; color:#64748b; text-align:center; width:100%; }
+
+.role-badge{ padding:.35rem .75rem; font-weight:600; font-size:.72rem; letter-spacing:.02em; }
+.role-badge-admin{ background:var(--clr-primary); color:#fff; }
+.role-badge-dosen{ background:var(--clr-secondary); color:#fff; }
+.role-badge-mahasiswa{ background:var(--clr-accent); color:#fff; }
+
+.avatar-circle{
+  width:32px; height:32px; border-radius:50%; background:var(--clr-secondary);
+  color:#fff; display:inline-flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:.85rem; text-transform:uppercase; flex-shrink:0;
+}
+
+/* ---------- Cards & stat widgets ---------- */
+.app-card{ border:1px solid #eef1f6; border-radius:16px; box-shadow:0 1px 3px rgba(15,23,42,.05); animation:fadeInUp .35s ease both; }
+.app-card .card-header{ background:#f8fafc; border-bottom:1px solid #eef1f6; font-weight:600; color:var(--clr-primary); border-radius:16px 16px 0 0 !important; }
+.app-card .card-footer{ background:#fff; border-top:1px solid #eef1f6; border-radius:0 0 16px 16px !important; }
+
+.stat-card{
+  background:#fff; border-radius:16px; padding:1.15rem 1.25rem; height:100%;
+  display:flex; align-items:center; gap:1rem; border:1px solid #eef1f6;
+  box-shadow:0 1px 3px rgba(15,23,42,.05); animation:fadeInUp .35s ease both;
+}
+.stat-icon{ width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.35rem; color:#fff; flex-shrink:0; }
+.stat-card-primary .stat-icon{ background:var(--clr-secondary); }
+.stat-card-info .stat-icon{ background:#0ea5e9; }
+.stat-card-success .stat-icon{ background:var(--clr-success); }
+.stat-card-warning .stat-icon{ background:var(--clr-warning); }
+.stat-value{ font-size:1.55rem; font-weight:800; line-height:1.15; color:var(--clr-primary); }
+.stat-label{ font-size:.78rem; color:#64748b; }
+
+.ta-badge{ background:var(--clr-secondary); color:#fff; font-weight:700; padding:.65rem 1.1rem; border-radius:12px; font-size:.85rem; }
+.nilai-huruf-badge{ background:var(--clr-accent); color:#fff; font-weight:700; padding:.35rem .65rem; min-width:2.5rem; display:inline-block; border-radius:6px; }
+
+@keyframes fadeInUp{ from{ opacity:0; transform:translateY(8px);} to{ opacity:1; transform:translateY(0);} }
+
+/* ---------- Login page ---------- */
+.login-body{ margin:0; min-height:100vh; background:#eef1f6; font-family:'Inter',sans-serif; }
+.login-shell{ min-height:100vh; display:flex; }
+
+.login-brand-panel{
+  flex:1 1 45%; position:relative; overflow:hidden; color:#fff;
+  background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 100%);
+  display:flex; align-items:center; justify-content:center; padding:3rem;
+}
+.brand-pattern{ position:absolute; inset:0; width:100%; height:100%; }
+.login-brand-content{ position:relative; z-index:1; max-width:420px; }
+.login-brand-mark{
+  width:62px; height:62px; border-radius:16px; background:rgba(255,255,255,.1);
+  display:flex; align-items:center; justify-content:center; font-size:1.7rem;
+  margin-bottom:1.5rem; border:1px solid rgba(255,255,255,.15);
+}
+.login-brand-content h1{ font-weight:800; font-size:2rem; margin-bottom:.4rem; }
+.login-brand-tagline{ color:#93c5fd; margin-bottom:2rem; }
+.login-brand-points{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1rem; }
+.login-brand-points li{ display:flex; align-items:center; gap:.75rem; font-size:.88rem; color:#e2e8f0; }
+.login-brand-points i{ color:#60A5FA; font-size:1.05rem; }
+
+.login-form-panel{ flex:1 1 55%; display:flex; align-items:center; justify-content:center; padding:2rem; }
+.login-form-card{ width:100%; max-width:410px; animation:fadeInUp .4s ease both; }
+.login-title{ font-weight:800; color:var(--clr-primary); margin-bottom:.2rem; }
+.login-subtitle{ color:#64748b; margin-bottom:1.4rem; font-size:.92rem; }
+
+.role-tabs{ display:flex; gap:.4rem; background:#f1f5f9; padding:.35rem; border-radius:12px; margin-bottom:1.4rem; }
+.role-tab{ flex:1; border:none; background:transparent; padding:.55rem .4rem; border-radius:9px; font-size:.82rem; font-weight:600; color:#64748b; cursor:pointer; transition:.15s; }
+.role-tab.active{ background:#fff; color:var(--clr-secondary); box-shadow:0 1px 3px rgba(15,23,42,.12); }
+
+.login-submit{ background:var(--clr-secondary); border-color:var(--clr-secondary); padding:.65rem; font-weight:600; }
+.login-submit:hover{ background:#152e7a; border-color:#152e7a; }
+
+.demo-hint{ margin-top:1.4rem; font-size:.76rem; color:#94a3b8; text-align:center; }
+.demo-hint code{ background:#f1f5f9; padding:.1rem .35rem; border-radius:4px; }
+
+@media (max-width:900px){
+  .login-shell{ flex-direction:column; }
+  .login-brand-panel{ flex:0 0 auto; padding:2rem 1.5rem; min-height:180px; }
+  .login-brand-points{ display:none; }
+  .login-form-panel{ padding:1.5rem 1.25rem; }
+}
+
+/* ---------- KRS ---------- */
+.krs-limit-card{ background:#fff; border:1px solid #eef1f6; border-radius:16px; padding:1.15rem 1.4rem; }
+.krs-sks-counter{ font-size:1.35rem; font-weight:800; color:var(--clr-secondary); }
+
+/* ---------- Jadwal ---------- */
+.jadwal-item{ padding:.7rem 0; border-bottom:1px dashed #e5e7eb; }
+.jadwal-item:last-child{ border-bottom:none; }
+.jadwal-jam{ font-size:.75rem; color:var(--clr-accent); font-weight:700; text-transform:uppercase; letter-spacing:.03em; }
+
+/* ---------- Transkrip ---------- */
+.transcript-summary{ background:linear-gradient(135deg,#0F172A,#1E3A8A); border-radius:16px; padding:1.5rem; color:#fff; }
+.transcript-summary .text-muted{ color:#93c5fd !important; }
